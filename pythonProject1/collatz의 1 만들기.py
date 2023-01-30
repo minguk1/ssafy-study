@@ -44,5 +44,6 @@ class Collatz:
         return f"{self.collatz()}"
 
 
-print(Collatz(2**500))
+print(Collatz(16))
+print(Collatz(27))
 
