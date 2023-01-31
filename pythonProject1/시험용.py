@@ -1,9 +1,10 @@
-import random
+num = 0
 
-numlist = [1,2,3,4,5,6,7,8,9]
-
-a = random.sample(numlist, 1)
-
-numlist.remove(a)
-print(numlist)
-print(a)
+try:
+    num = int(input("숫자를 입력해주세요."))
+    print("try가 실행되는지 확인")
+except ValueError:
+    print("값 에러 발생")
+except ZeroDivisionError:
+    print("0으로 나눌 수 없습니다.")
+print(num)
