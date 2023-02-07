@@ -1,30 +1,132 @@
-T = int(input())
+N = 4
+A = [[0]*4 for _ in range(N)]
+print(A)
+A[0][0] = 1
+i = 0
+j = 0
+change_count = N - 1
+k = 0
+p = 1
 
-for p in range(1, T+1):
+while True:
+    if p == N ** 2 + 1:
+        break
+    if k == change_count:
+        k = 0
+        break
+    else:
+        k += 1
+        p += 1
+        j += 1
+        A[i][j] = p
 
+print(A)
+print(p)
+print(i, j)
+print(k)
+while True:
+    if p == N ** 2 + 1:
+        break
+    if k == change_count:
+        k = 0
+        break
+    else:
+        k += 1
+        p += 1
+        i += 1
+        A[i][j] = p
 
-    N, M = map(int, input().split())
-    a = list(map(int, input().split()))
-    b = list(map(int, input().split()))
+print(A)
+print(i)
+print(j)
+print(p)
+while True:
+    if p == N ** 2 + 1:
+        break
+    if k == change_count:
+        k = 0
+        change_count -= 1
+        break
+    else:
+        k += 1
+        p += 1
+        j -= 1
+        A[i][j] = p
+print(A)
+print(i)
+print(j)
+print(p)
+while True:
+    if p == N ** 2 + 1:
+        break
+    if k == change_count:
+        k = 0
+        break
+    else:
+        k += 1
+        p += 1
+        i -= 1
+        A[i][j] = p
+print(A)
+print(i)
+print(j)
+print(p)
 
-    e = 0
-    # print(a[0], b[0])
-    k = 0
-    while k<abs(N-M)+1:
-        d = 0
-        for i in range(0, min(N,M)):
-            if N >= M:
+while True:
+    if p == N ** 2 + 1:
+        break
+    if k == change_count:
+        k = 0
+        break
+    else:
+        k += 1
+        p += 1
+        j += 1
+        A[i][j] = p
+print(A)
+print(i)
+print(j)
+print(p)
 
-                c = a[i+k] * b[i]
-            else :
-                c = a[i] * b[i + k]
+while True:
+    if p == N ** 2 + 1:
+        break
 
-            d = d + c
-
-        # print((d))
-        # print(sum(d))
-        if d >= e:
-            e = d
-        k = k+1
-    # print(e)
-    print(f"#{p} {e}")
+    if k == change_count:
+        k = 0
+        break
+    else:
+        k += 1
+        p += 1
+        i += 1
+        if A[i][j] > 0:
+            k -= 1
+            p -= 1
+            i -= 1
+            break
+        A[i][j] = p
+print(A)
+print(i)
+print(j)
+print(p)
+while True:
+    if p == N ** 2 + 1:
+        break
+    if k == change_count:
+        k = 0
+        change_count -= 1
+        break
+    else:
+        k += 1
+        p += 1
+        j -= 1
+        if A[i][j] > 0:
+            k -= 1
+            p -= 1
+            j += 1
+            break
+        A[i][j] = p
+print(A)
+print(i)
+print(j)
+print(p)
