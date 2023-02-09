@@ -45,6 +45,7 @@ def alp_num_sort(a, b):
     for i in range(len(b) - 1, -1, -1):
         c[a[i]] -= 1
         b[c[a[i]]] = a[i]
+    print(c)
     return ' '.join(b)
 
 T = int(input())
