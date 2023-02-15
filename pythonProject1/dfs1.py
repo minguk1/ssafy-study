@@ -59,7 +59,7 @@ for i in range(E):
 #adj_list[i] -- i번 접점에 연결되어 있는 접점들의 리스트
 '''
 for i in range(E):
-    start, end = map(int, input().split())
-    adj_list[start].append(end)
+    start, end = map(int, input().split()) 
+    adj_list[start].append(end)             
     adj_list[end].append(start)
 '''

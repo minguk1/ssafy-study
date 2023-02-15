@@ -1,1 +1,1 @@
-print(str(3) in str(3))
+print(sum([3, 4]))
