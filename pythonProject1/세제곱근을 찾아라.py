@@ -2,17 +2,9 @@ T = int(input())
 for tc in range(1, T + 1):
 
     n = int(input())
-    result = False
-    # print(int(n ** 0.5))
-    # print(n**0.5)
-    for p in range(int(n ** 0.5), int(n ** 0.25) -1 , -1):
-        if int(n / p) == p ** 2:
-            result = True
-            break
-        if int(n / p) > int(p ** 2):
-            break
-    if result == True:
-
-        print(f"#{tc} {p}")
+    t = n**(1/3)
+    print(t)
+    if abs(round(t) - t) <= 1e-8:
+        print(f"#{tc} {int(round(t))}")
     else:
         print(f"#{tc} -1")
