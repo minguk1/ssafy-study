@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- element:nth-child(n)
+    부모의 n번째 자식을 선택한다.
+    모든 자식 element 중에 n번째를 찾는다 
+    부모의 n번째 자식이 지정된 element라면 작성된 스타일이 적용된다.-->
+
+    <!-- element:nth-of-type(n)
+    부모이 자식 element 중에 지정한 element의 n번째를 선택한다.
+    다른 element들은 무시하고 지정된 element 중 n번째를 찾는다. -->
+
+    <style>
+        /* 자식 중에서 2번째 자식이 p인 경우 */
+        p:nth-child(2) {
+            color : blue;
+        }
+        /* 자식이 p가 여러 명 있는데 그 중 2번째 */
+        p:nth-of-type(2) {
+            color : red;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="hphk">
+        <h2>어떻게 선택 될까?</h2>
+        <p>첫번째 단락</p>
+        <p>두번째 단락</p>
+        <p>세번째 단락</p>
+        <p>네번째 단락</p>
+    </div>
+</body>
+</html>
