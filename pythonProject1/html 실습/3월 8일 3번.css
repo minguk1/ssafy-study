@@ -1,0 +1,25 @@
+.one {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: inline;
+    background-color: white;
+    
+}
+
+.board {
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+}
+
+.row {
+    width: 800px;
+    height: 100px;
+    display: flex;
+}
+
+.row:nth-child(odd) .one:nth-child(even),
+.row:nth-child(even) .one:nth-child(odd) {
+    background-color: black;
+}
