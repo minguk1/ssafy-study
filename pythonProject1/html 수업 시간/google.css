@@ -1,0 +1,29 @@
+.head {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.head1 {
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.head2 {
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.h {
+    width: 70px;
+    height: 70px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 70px;
+}

@@ -1,0 +1,32 @@
+.container {
+    background-color: cadetblue;
+    height: 300px;
+    display: flex;
+    
+    /* align-items: stretch; 기본값 */
+    /* 밑에 2개는 가로, 세로축 다 가운데정렬이니 기억하기 */
+    /* justify-content: center;
+    align-items: center; */
+    align-content: ;
+}
+
+.item {
+    background-color: tan;
+    border: 1px solid black;
+    font-size: 20px;
+    margin-right: 3px;
+}
+
+.order1 {
+    order: 1;
+}
+
+.order2 {
+    order: 2;
+}
+
+.order3 {
+    order: 3;
+}
+
+/* grow 수로 늘어나고 줄어들 때 비율 설정  */

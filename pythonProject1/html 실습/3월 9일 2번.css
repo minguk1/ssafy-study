@@ -1,0 +1,98 @@
+.unable {
+    
+    background-color: red;
+    width: 500px;
+    padding-left: 20px;
+    color:white;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.title1 {
+    font-size: 43px;
+}
+
+.title-line  {
+    width: 520px;
+
+}
+
+.bigbox {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /* justify-content: space-around; */
+}
+
+.sign {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    
+}
+
+.sign-line > hr {
+    
+    border-color: blue;
+}
+
+.section {
+    margin-left: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.username-box {
+    border: 1px solid gray;
+    height: 40px;
+    border-radius: 5px;
+    width: 480px;
+
+}
+
+.password-box {
+    border: 1px solid gray;
+    height: 40px;
+    width: 480px;
+    border-radius: 5px;
+
+}
+
+.re-for {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+
+}
+.forgot {
+    color: blue;
+    margin-right: 5px;
+}
+
+.signbox {
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: green;
+    line-height: 40px;
+    color: white;
+    width: 480px;
+}
