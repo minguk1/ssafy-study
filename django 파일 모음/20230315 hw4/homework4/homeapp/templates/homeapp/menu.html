@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p1>sdf</p1>
+    
+        
+    {% for menu in menus %}
+        <p>{{ forloop.counter0 }}번째 메뉴 : {{ menu }}</p>
+    {% endfor %}
+
+    
+<!-- 5 -->
+<p>{{ 'hello'|length }}</p>
+<!-- My Name Is Tom -->
+<p>{{ 'my name is tom'|title}}</p>
+
+<!-- 2020년 02월 02일 (Sun) PM 02:02 -->
+{{ today|date:"o"  }}년 {{ today|date:"m"  }}월 {{ today|date:"d"  }}일  {{ today|date:"a"  }} {{ today|date:"h"  }}:{{ today|date:"i"  }}
+    
+</body>
+</html>
