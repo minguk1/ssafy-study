@@ -1,0 +1,92 @@
+[
+{
+    "model": "articles.article",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "title": "user 2 力格",
+        "content": "user2 郴侩",
+        "image": "",
+        "created_at": "2023-04-12T00:08:01.935Z",
+        "updated_at": "2023-04-12T00:08:01.935Z",
+        "like_users": [
+            1
+        ]
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "title": "user1 力格",
+        "content": "user1 郴侩",
+        "image": "",
+        "created_at": "2023-04-12T00:09:01.363Z",
+        "updated_at": "2023-04-12T00:09:01.363Z",
+        "like_users": [
+            1
+        ]
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "article": 1,
+        "content": "せせせせせ",
+        "created_at": "2023-04-12T00:08:09.333Z",
+        "updated_at": "2023-04-12T00:08:09.333Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "article": 2,
+        "content": "ぞ",
+        "created_at": "2023-04-12T00:09:08.879Z",
+        "updated_at": "2023-04-12T00:09:08.879Z"
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$8fgyrqYxPFADormOebDqlD$fxKAcudaIKhJ23ibX0hQzgsRAS3zEFsEUhV7w+s1aF0=",
+        "last_login": "2023-04-12T00:51:11.436Z",
+        "is_superuser": false,
+        "username": "user1",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-12T00:07:17.938Z",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$FoRNhCKc6CzoIhHX5OQv40$o8jGnlXnY67GgA4DpWRCXH/+AutKzGdUHONMWwa+qLQ=",
+        "last_login": "2023-04-12T00:07:28.963Z",
+        "is_superuser": false,
+        "username": "user2",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-12T00:07:28.816Z",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+}
+]
