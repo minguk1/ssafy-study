@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="{% url 'articles:index' %}">인덱스로 돌아가기</a>
+<h1>{{user}}님의 프로필</h1>
+<hr>
+<h3>{{user}}'s 게시글</h3>
+{% for article in user_articles  %}
+<a href="{% url 'articles:detail' article.pk%}">{{article.title}}</a>
+<br>
+<hr>
+
+
+
+{% endfor %}
+<h3>{{user}}'s 좋아요한 게시글</h3>
+{% for article in user_like_articles  %}
+<a href="{% url 'articles:detail' article.pk%}">{{article.title}}</a>
+<br>
+<hr>
+
+
+
+
+{% endfor %}
+
+
+
+
+
+
+
+{% endblock content %}

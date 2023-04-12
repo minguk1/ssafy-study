@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{hashtag}}
+<br>
+{{articles.count}}개의 게시글
+<div>
+    <h2>{{hashtag.content}}를 태그한 글</h2>
+    {% for article in articles reversed %}
+    <h3>{{article.pk}}번 게시글</h3>
+    <h3>{{article.title}}</h3>
+    <p>{{article.content}}</p>
+
+    <a href="{% url 'articles:detail' article.pk%}">[상세글로 바로가기]</a>
+    <hr>
+    
+    
+    
+    {% endfor %}
+</div>
+
+
+
+
+
+
+{% endblock content %}
