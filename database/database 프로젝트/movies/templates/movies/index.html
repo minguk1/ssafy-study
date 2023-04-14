@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>INDEX</h1>
+  <a href="{% url 'movies:create' %}">[CREATE]</a>
+  <hr>
+  {% for movie in movies %}
+    <a href="{% url 'movies:detail' movie.pk %}"><p>{{ movie.title }}</p></a>
+    <p>{{movie.like_users.count}}명이 이 영화를 좋아합니다.</p>
+    <div>
+      <form action="{% url 'movies:likes' movie.pk %}" method="POST">
+        {% csrf_token %}
+        {% if request.user in movie.like_users.all %}
+          <input type="submit" value="좋아요 취소!">
+        {% else %}
+          <input type="submit" value="좋아요!">
+        {% endif %}
+      </form>
+    </div>
+    <hr>
+  {% endfor %}
+  <form class="d-flex" method="POST" action="{% url 'movies:search' %}">
+    {% csrf_token %}        
+    <input class="form-control me-2" type="search" placeholder="Search" name="searched" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit"> Search </button>
+  </form>
+{% endblock %}

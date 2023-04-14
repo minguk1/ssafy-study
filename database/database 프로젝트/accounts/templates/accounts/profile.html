@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{person.username}}님의 프로필</h1>
+<div>
+    <div>팔로잉 : {{person.followings.count}}</div>
+    <div>팔로워 : {{person.followers.count}}</div>
+    {% if request.user != person %}
+    <form action="{% url 'accounts:follow' person.username %}">
+        {% csrf_token %}
+        {% if request.user in person.followers.all %}
+            <button type="submit" class="btn btn-danger">unfollow</button>
+        {% else %}
+        <button type="submit" class="btn btn-success">follow</button>
+        {% endif %}
+        
+
+
+
+
+
+
+    </form>
+    {% endif %}
+    <a href="{% url 'movies:index' %}">목록 돌아가기</a>
+    
+    
+    
+
+
+
+</div>
+
+
+
+
+
+{% endblock content %}
