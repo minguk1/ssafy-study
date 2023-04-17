@@ -1,0 +1,20 @@
+8-4
+(a) article=article
+(b)read_only_fields
+
+7-4
+a
+(a) raise_exception=True
+(b) save()
+(c) status.HTTP_201_CREATED
+
+b
+(a) comment_set
+(b) CommentSerializer
+(c) many=True
+(d) read_only=True
+
+c
+(c) comment_count
+(a) source
+(b) comment_set.count
