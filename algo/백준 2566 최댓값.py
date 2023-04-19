@@ -1,9 +1,9 @@
-lst = [0]*9
+lst = []
 for i in range(9):
-    lst[i] = list(map(int, input().split()))
+    lst.append(list(map(int, input().split())))
 
 max_value = 0
-
+a, b = 0, 0
 for i in range(9):
     for j in range(9):
         if lst[i][j] > max_value:
