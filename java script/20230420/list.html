@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <!-- prompt 로 과일 3개 입력 받고 리스트 태그로 body에 추가 해보기  -->
+    <script>
+        let u = document.querySelector('ul')
+        const parent = document.querySelector('body')
+        for (let i = 0; i < 3; i++) {
+            let fruit = window.prompt("과일을 입력하세요.")
+            let l = document.createElement('li')
+            l.innerText = fruit
+            u.appendChild(l)
+        }
+
+
+
+
+    </script>
+</body>
+</html>

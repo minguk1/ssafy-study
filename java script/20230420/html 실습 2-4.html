@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .board {
+      width: 800px;
+      height: 800px;
+      border: 2px solid black
+    }
+    .row {
+      display: flex;
+      width: 800px;
+      height: 100px;
+    }
+    .c {
+      width: 100px;
+      height: 100px;
+      box-sizing: border-box;
+    }
+    .f1 :nth-child(2n) {
+      background-color: black;
+    }
+    .f2 :nth-child(2n-1) {
+      background-color: black;
+    }
+    
+  </style>
+</head>
+
+<body>
+  
+  <script>
+    let box = document.createElement('div');
+    box.classList.add('board')
+    let body = document.querySelector('body');
+    body.appendChild(box)
+    for (let i = 0; i <8; i++) {
+    let row = document.createElement('div');
+    for (let j = 0; j <8; j++) {
+    let col = document.createElement('div');
+    col.classList.add('c')
+    row.appendChild(col)
+    }
+    if (i % 2 === 0) {
+        row.classList.add('f1')
+    }
+    else {row.classList.add('f2')}
+    row.classList.add('row')
+    box.appendChild(row);
+}
+  </script>
+</body>
+
+</html>
