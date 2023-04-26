@@ -21,9 +21,9 @@ def star(n):
         # star(n/3)
         n_list = [[" "]*n for _ in range(n)]
         m_list = star(n//3)
-        print(m_list)
-        for m in m_list:
-            print(''.join(m))
+        # print(m_list)
+        # for m in m_list:
+        #     print(''.join(m))
         # print(n_list)
         # print(n_list[8][8],n_list[8])
         for i in range(3):
@@ -33,7 +33,7 @@ def star(n):
                         # print(i,j,m,k)
                         # print(3*i+m, 3*j+k)
                         n_list[n//3*i+m][n//3*j+k] = m_list[m][k]
-                        print(3*i+m, 3*j+k)
+                        # print(3*i+m, 3*j+k)
                         # print(n_list)
         for i in range(n):
             for j in range(n):
