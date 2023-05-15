@@ -22,13 +22,15 @@ export default {
     login: function () {
       axios({
         method : 'post',
-        url : 'http://127.0.0.1:8000/accounts/',
+        url : 'http://127.0.0.1:8000/accounts/login/',
         data : {username : this.username, password : this.password}
       })
       .then((res) => {
         console.log(res)
-        // this.userinformations.push(res.data)
-        // this.$router.push({name : 'Login'})
+        console.log(res.data.access)
+        const stringfyToken = JSON.stringify(res.data.access)
+        localStorage.setItem('TokenSave', stringfyToken)
+        
         
       })
       .catch((err) => {

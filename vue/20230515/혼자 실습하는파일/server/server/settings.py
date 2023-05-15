@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     # drf
     'rest_framework',
     'corsheaders',
-    'rest_framework_simplejwt',
+    # 'rest_framework_simplejwt', 
     'dj_rest_auth',
     'rest_framework.authtoken',
     
@@ -150,18 +150,21 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 REST_FRAMEWORK = {
-    
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    'DEFAULT_AUTHENTICATION_CLASSES' : [
+        # "rest_framework.authentication.TokenAuthentication"
+        'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES' : [
+        "rest_framework.permissions.AllowAny"
     ]
-    
 }
+SITE_ID = 1    
+
 REST_AUTH = {
     'SESSION_LOGIN' : False,
     'USE_JWT': True,
     'JWT_AUTH_COOKIE': 'todo-auth',
-    # 'JWT_AUTH_REFRESH_COOKIE': 'todo-refresh-token',
+    'JWT_AUTH_REFRESH_COOKIE': 'todo-refresh-token',
 }
 
 # 토큰 만료 시간 설정
