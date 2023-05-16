@@ -27,6 +27,7 @@ export default new Vuex.Store({
   mutations: {
     GET_ARTICLES(state, articles) {
       state.articles = articles
+      console.log(articles)
     },
     
     // signup & login => 토큰 발급 
