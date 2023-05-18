@@ -1,6 +1,8 @@
 <template>
   <div id="app" >
     <h1>Coffee Order App</h1>
+    <img src="assets/logo.png" alt="">
+    <img src="assets/무민.png" alt="">
     <div class="d-flex">
       <MenuList class="col-6"/>
       <SizeList class="col-6"/>
